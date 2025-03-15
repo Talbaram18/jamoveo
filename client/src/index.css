@@ -1,0 +1,13 @@
+/* index.css - Main entry point that imports all the styles */
+
+/* Import global variables and reset */
+@import 'global.css';
+
+/* Import page-specific styles */
+@import 'LoginPage.css';
+@import 'SignupPage.css';
+@import 'AdminMainPage.css';
+@import 'PlayerMainPage.css';
+@import 'LivePage.css';
+@import 'ResultsPage.css';
+@import 'Header.css';

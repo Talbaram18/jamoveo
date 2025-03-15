@@ -1,0 +1,124 @@
+/* SignupPage.css */
+
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+.signup-page .container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.signup-container {
+  width: 85%;
+  max-width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.signup-container::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--accent-pink);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.signup-container::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--accent-yellow);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.signup-container h2 {
+  color: var(--text-color);
+  margin-bottom: 0.6rem;
+  position: relative;
+  z-index: 1;
+  font-size: 1.2rem;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.signup-container form {
+  position: relative;
+  z-index: 1;
+}
+
+.signup-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.signup-toggle button {
+  flex: 1;
+  max-width: 120px;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.signup-container .text-center p {
+  margin-top: 0.6rem;
+  color: var(--text-color);
+  position: relative;
+  z-index: 1;
+  font-size: 0.8rem;
+}
+
+/* Ensure select inputs have the same styling as text inputs */
+.signup-container select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235a6a7a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .signup-toggle {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .signup-toggle button {
+    max-width: 100%;
+  }
+}

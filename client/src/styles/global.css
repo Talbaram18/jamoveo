@@ -1,0 +1,438 @@
+/* global.css - Cleaned version with duplicates removed */
+
+:root {
+  /* Pastel Color Palette */
+  --primary-color: #94c2f3; /* Soft Pastel Blue */
+  --secondary-color: #bfd8e0; /* Light Pastel Teal */
+  --background-color: #f5faff; /* Very Light Sky Blue */
+  --text-color: #5a6a7a; /* Softer Blue-Gray for text */
+  --accent-color: #a5d8d6; /* Mint Green */
+  --accent-pink: #f7c2d2; /* Soft Pink */
+  --accent-lavender: #d1c2f7; /* Soft Lavender */
+  --accent-yellow: #f7e3c2; /* Soft Yellow */
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', sans-serif;
+
+  /* Transitions */
+  --transition: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(
+    135deg,
+    var(--accent-lavender) 0%,
+    var(--background-color) 100%
+  );
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Form Styles */
+.form-container {
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.error-message {
+  color: #ff7b8f;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-weight: 500;
+  padding: 0.4rem;
+  background-color: rgba(255, 123, 143, 0.1);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Button Component Styles */
+button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Primary button */
+button[variant='primary'],
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--accent-color) 100%
+  );
+  color: white;
+  box-shadow: 0 4px 10px rgba(148, 194, 243, 0.3);
+}
+
+button[variant='primary']:hover,
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(148, 194, 243, 0.4);
+}
+
+/* Secondary button */
+button[variant='secondary'],
+.btn-secondary {
+  background-color: var(--accent-lavender);
+  color: white;
+  box-shadow: 0 4px 10px rgba(209, 194, 247, 0.3);
+}
+
+button[variant='secondary']:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(209, 194, 247, 0.4);
+}
+
+/* Outline button */
+button[variant='outline'],
+.btn-outline {
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+button[variant='outline']:hover,
+.btn-outline:hover {
+  background-color: rgba(148, 194, 243, 0.1);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+button.w-100 {
+  width: 100%;
+}
+
+/* Input Component Styles */
+input,
+select {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.7rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent-lavender);
+  box-shadow: 0 0 0 3px rgba(209, 194, 247, 0.2);
+  background-color: white;
+}
+
+/* Link styles */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header and Footer defaults */
+header,
+footer {
+  background-color: #d1c2f7; /* Soft Lavender */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 0;
+  z-index: 10;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: auto;
+  height: 30px;
+  font-size: 0.8rem;
+}
+
+/* SongDisplay Component Styles */
+.song-display-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Song header styling */
+.song-header {
+  margin-bottom: 1.5rem;
+}
+
+.song-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.song-artist {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #666;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* Controls styling */
+.song-controls-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 10px;
+}
+
+.quit-session-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.auto-scroll-toggle {
+  min-width: 140px;
+}
+
+.auto-scroll-toggle.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Lyrics container styling */
+.lyrics-container {
+  font-size: 1.5rem;
+  line-height: 3;
+  padding: 1rem;
+  max-height: 70vh;
+  overflow-y: auto;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.lyrics-container.auto-scrolling {
+  scroll-behavior: smooth;
+}
+
+/* Word container styling */
+.word-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.75rem;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+/* Chord styling */
+.chord-above {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #e9d5ff;
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Lyric line styling */
+.lyric-line {
+  margin-bottom: 1.5rem;
+  min-height: 2.5rem;
+}
+
+/* RTL text styling */
+[dir='rtl'] {
+  text-align: right;
+}
+
+/* RTL chord positioning */
+[dir='rtl'] .chord-above {
+  display: block;
+  text-align: center;
+}
+
+/* No lyrics message */
+.no-lyrics-message {
+  text-align: center;
+  padding: 2rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* Auto-scrolling related styles */
+.song-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.scroll-speed-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.speed-indicator {
+  margin: 0 1rem;
+  font-size: 0.9rem;
+}
+
+/* Live page styles */
+.live-page {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.live-page-container {
+  background-color: #f7e3f5;
+  border-radius: px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 800px; /* Set a specific width, e.g., 800 pixels */
+}
+
+.session-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.session-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #e9d5ff;
+}
+
+.session-header h2 {
+  font-size: 1.5rem;
+  color: #a78bfa;
+  font-style: italic;
+}
+
+.no-active-session {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.no-active-session h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #a78bfa;
+}
+
+.no-active-session p {
+  font-size: 1.25rem;
+  color: #e9d5ff;
+}
+
+.admin-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 480px) {
+  button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    border-radius: 16px;
+  }
+
+  input,
+  select {
+    padding: 0.4rem 0.7rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+
+  input:focus,
+  select:focus {
+    box-shadow: 0 0 0 2px rgba(209, 194, 247, 0.2);
+  }
+
+  header {
+    height: 35px;
+  }
+
+  footer {
+    height: 25px;
+    font-size: 0.7rem;
+  }
+}
