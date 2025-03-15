@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Hey Jude",
+    "artist": "The Beatles",
+    "language": "en"
+  },
+  "lyrics": [
+    [
+      { "lyrics": "Hey", "chords": "F" },
+      { "lyrics": "Jude", "chords": null },
+      { "lyrics": "don't", "chords": "C" },
+      { "lyrics": "make", "chords": "C7" }
+    ],
+    [
+      { "lyrics": "it", "chords": "F" },
+      { "lyrics": "bad", "chords": null },
+      { "lyrics": "Take", "chords": "Bb" },
+      { "lyrics": "a", "chords": null },
+      { "lyrics": "sad", "chords": "F" }
+    ],
+    [
+      { "lyrics": "song", "chords": "C" },
+      { "lyrics": "and", "chords": null },
+      { "lyrics": "make", "chords": "F" },
+      { "lyrics": "it", "chords": "C7" }
+    ],
+    [
+      { "lyrics": "better", "chords": "F" },
+      { "lyrics": "Re", "chords": "Bb" },
+      { "lyrics": "member", "chords": null },
+      { "lyrics": "to", "chords": "F" }
+    ],
+    [],
+    [
+      { "lyrics": "let", "chords": "C" },
+      { "lyrics": "her", "chords": null },
+      { "lyrics": "into", "chords": "F" },
+      { "lyrics": "your", "chords": "C7" }
+    ],
+    [
+      { "lyrics": "heart", "chords": "F" },
+      { "lyrics": "Then", "chords": "Bb" },
+      { "lyrics": "you", "chords": "F" }
+    ]
+  ]
+}
