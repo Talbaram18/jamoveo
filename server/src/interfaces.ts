@@ -1,4 +1,4 @@
-import { UserSignupDTO } from './src/types/user';
+import { UserSignupDTO } from './types/user';
 import { Request } from 'express';
 
 export interface LoginRequest extends Request {

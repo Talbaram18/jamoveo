@@ -11,7 +11,7 @@ import { dbUtils } from '../database/dbUtils';
 import { User } from '../types/user';
 import { UserRole } from '../types/userRole.ENUM';
 import { AppError } from '../middleware/errorHandler';
-import { LoginRequest, SignupRequest } from '../../interfaces';
+import { LoginRequest, SignupRequest } from '../interfaces';
 /**
  * Authentication Routes
  *
